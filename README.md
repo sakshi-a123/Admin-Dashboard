@@ -87,7 +87,7 @@ src
 
 ---
 
-Design & Implementation Decisions
+ Design & Implementation Decisions
 Figma as Single Source of Truth
 
 All spacing, typography, colors, and layout were taken directly from Figma
