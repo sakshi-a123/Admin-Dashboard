@@ -1,0 +1,121 @@
+/* --- GLOBAL THEME VARIABLES --- */
+:root {
+  --primary: #7367f0;
+  --bg-body: #f8f7fa;
+  --bg-card: #ffffff;
+  --text-main: #5d596c;
+  --text-light: #a5a3ae;
+  --border-color: #dbdade;
+  --card-shadow: 0 2px 10px rgba(76, 78, 100, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+}
+
+/* --- LAYOUT WRAPPERS --- */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.layout {
+  display: flex;
+  width: 100%;
+}
+
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.main-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Vertical spacing between all Rows */
+}
+
+/* --- THE LEVELING ENGINE (CRITICAL) --- */
+
+/* Added .analytics-row-container here to sync Row 3 */
+.content-grid, 
+.stats-container, 
+.dashboard-row-container,
+.analytics-row-container {
+  display: flex;
+  gap: 24px;
+  align-items: stretch; /* Forces all boxes in the row to end at the same line */
+}
+
+/* 2. Sections act as containers that must also stretch */
+.transaction-section,
+.analytics-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-section { flex: 1.7; }
+.meeting-section { flex: 1; min-width: 380px; display: flex; }
+
+/* 3. The actual Card Component inside the sections */
+/* Ensure all main cards in Row 3 use these styles */
+.transaction-section > div,
+.meeting-section > div,
+.total-profit-card,
+.sales-donut-card,
+.analytics-column > div {
+  width: 100%;
+  height: 100%; /* Forces background to fill the stretched parent */
+  background: var(--bg-card);
+  border-radius: 6px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+/* --- MINICHART / TOTAL PROFIT SYNC --- */
+.total-profit-card {
+  flex-direction: row; 
+  padding: 0 !important; 
+}
+
+.graph-container {
+  flex: 2;
+  padding: 24px;
+  border-right: 1px solid #f0f2f4;
+}
+
+.report-container {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* --- FULL LENGTH DOTTED LINE --- */
+.grid-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.dashed-line {
+  flex: 1;
+  border-bottom: 1px dashed var(--border-color);
+  margin-left: 10px;
+}

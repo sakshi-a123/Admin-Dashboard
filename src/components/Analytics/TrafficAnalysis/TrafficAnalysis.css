@@ -1,0 +1,131 @@
+.traffic-analysis-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(76, 78, 100, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.traffic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.traffic-title {
+  font-size: 18px;
+  color: #5d596c;
+  font-weight: 600;
+  margin: 0;
+}
+
+.menu-dots {
+  color: #a5a3ae;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.traffic-hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 12px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #dbdade; /* Top divider line */
+}
+
+.total-number {
+  font-size: 36px;
+  font-weight: 600;
+  color: #5d596c;
+  margin: 0;
+}
+
+.total-label {
+  color: #a5a3ae;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.hero-chart-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 65px;
+}
+
+.chart-bar {
+  width: 5px;
+  background-color: #7367f0;
+  border-radius: 3px;
+  opacity: 0.9;
+}
+
+/* List with Separator Lines */
+.traffic-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.traffic-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0; /* Creates space around the lines */
+  border-bottom: 1px solid #f0f0f2; /* THE SEPARATOR LINES */
+}
+
+/* Removes the last line for a clean finish */
+.traffic-item-row:last-child {
+  border-bottom: none;
+}
+
+.item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.item-label {
+  color: #5d596c;
+  font-size: 15px;
+}
+
+.item-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Fixed widths to keep numbers in a straight column */
+.item-value {
+  font-weight: 600;
+  color: #5d596c;
+  width: 70px;
+  text-align: right;
+}
+
+.item-percent {
+  color: #a5a3ae;
+  width: 45px;
+  text-align: right;
+  margin: 0 12px;
+}
+
+.item-arrow {
+  width: 15px;
+  font-size: 12px;
+}
+
+.item-arrow.up { color: #28c76f; }
+.item-arrow.down { color: #ea5455; }

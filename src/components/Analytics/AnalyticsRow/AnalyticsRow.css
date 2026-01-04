@@ -1,0 +1,15 @@
+.analytics-row-container {
+  display: flex;
+  gap: 24px;
+  align-items: stretch; /* Forces all columns to start and end at the same line */
+  width: 100%;
+}
+
+.analytics-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-left { flex: 1; }
+.col-middle { flex: 1.2; }
+.col-right { flex: 1.3; }

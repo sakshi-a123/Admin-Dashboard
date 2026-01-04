@@ -1,0 +1,32 @@
+.kpi-card-root {
+  background-color: #ffffff !important; /* Pure white card */
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  box-shadow: 0 2px 12px rgba(76, 78, 100, 0.1) !important; /* Floating shadow */
+  display: flex;
+  flex-direction: column;
+}
+
+.kpi-header {
+  display: flex;
+  justify-content: space-between; /* Icon on left, Dots on right */
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.kpi-icon-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%; /* Perfect circle from your image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Red for Logistics, Orange for Reports */
+.red { background-color: #fbe7e8; color: #ea5455; }
+.orange { background-color: #fff4e4; color: #ff9f43; }
+
+.kpi-dots { color: #a5a3ae; font-size: 20px; cursor: pointer; }
+.kpi-val { font-size: 22px; color: #5d596c; font-weight: 600; margin: 4px 0; }

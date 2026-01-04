@@ -1,0 +1,45 @@
+.footer {
+  height: 60px;
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 0.85rem;
+  color: #6e6b7b;
+
+  /* push footer to bottom */
+  margin-top: auto;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 18px;
+  margin-left: auto; /* ensures right alignment */
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: #7367f0; /* BLUE like Materio */
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.footer-right a:hover {
+  opacity: 0.75;
+}
+
+.heart {
+  color: #ea5455;
+}
+
+.brand {
+  color: #7367f0;
+  font-weight: 600;
+}

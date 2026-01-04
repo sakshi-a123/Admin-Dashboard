@@ -1,0 +1,107 @@
+/* src/components/Sidebar/Sidebar.css */
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #1e1f3b;
+  padding: 20px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  overflow-y: auto;
+}
+
+.sidebar-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Sections */
+.menu-section {
+  margin-bottom: 1.6rem;
+}
+
+/* Title with horizontal lines */
+.section-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #8f8fa3;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 10px;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  height: 1px;
+  background-color: #3a3b5c;
+}
+
+.section-title::before {
+  flex: 0.2;
+}
+
+.section-title::after {
+  flex: 1;
+}
+
+/* Menu */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  margin-bottom: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 0.9rem;
+  color: #c1c1d1;
+}
+
+.menu-item:hover {
+  background-color: #2c2d55;
+  color: #ffffff;
+}
+
+.menu-item.active {
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
+  color: #ffffff;
+}
+
+/* Icon */
+.menu-item .icon {
+  font-size: 1.05rem;
+  margin-right: 12px;
+  min-width: 20px;
+}
+
+/* Text */
+.menu-item .text {
+  flex: 1;
+}
+
+/* Arrow */
+.menu-item .arrow {
+  margin-left: 12px;
+  font-size: 0.75rem;
+  color: #8f8fa3;
+  transition: all 0.2s ease;
+}
+
+.menu-item:hover .arrow,
+.menu-item.active .arrow {
+  color: #ffffff;
+  transform: translateX(2px);
+}

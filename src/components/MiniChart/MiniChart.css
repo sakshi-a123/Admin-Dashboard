@@ -1,0 +1,113 @@
+.dashboard-row-container {
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+  background-color: #f8f7fa;
+  /* This ensures the Left and Right columns are always equal height */
+  align-items: stretch; 
+}
+
+.card-style {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(75, 70, 92, 0.1);
+  padding: 20px;
+}
+
+/* --- TOTAL PROFIT SECTION (Left) --- */
+.total-profit-card {
+  flex: 2;
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(75, 70, 92, 0.1);
+  /* Ensures internal elements stretch to the bottom */
+  align-items: stretch;
+}
+
+.graph-container { flex: 2; padding: 24px; border-right: 1px solid #f0f2f4; }
+.canvas-area { position: relative; height: 280px; margin-top: 20px; }
+.grid-layer { position: absolute; top: 0; left: 0; width: 100%; height: 240px; display: flex; flex-direction: column; justify-content: space-between; z-index: 1; }
+.grid-row { display: flex; align-items: center; }
+.y-axis-label { font-size: 11px; color: #a5a3ae; width: 35px; }
+.dashed-line { flex: 1; border-bottom: 1px dashed #dbdade; }
+
+/* Keep 0k line dotted as requested */
+.grid-row:last-child .dashed-line { border-bottom: 1px dashed #dbdade; }
+
+.bars-and-labels { position: absolute; top: 0; left: 35px; right: 0; height: 100%; display: flex; justify-content: space-around; z-index: 2; }
+.bar-column { width: 12px; height: 100%; display: flex; flex-direction: column; align-items: center; }
+.bar-track { 
+  position: relative; 
+  width: 100%; 
+  height: 240px; 
+  display: flex; 
+  align-items: flex-end;
+  /* Removed solid border to rely on the dotted grid line */
+}
+
+.pill-segment { position: absolute; width: 100%; border-radius: 10px; bottom: 0; }
+.pill-segment.purple { background: #7367f0; }
+.pill-segment.green { background: #28c76f; }
+.pill-segment.grey { background: #808390; }
+.x-axis-year { font-size: 11px; color: #a5a3ae; margin-top: 10px; white-space: nowrap; }
+
+/* --- TOTAL SALES GRID (Right) --- */
+.sales-grid-container { 
+  flex: 1; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 24px; 
+}
+
+/* FIX: This makes the top Sales card grow to fill the space 
+   so the bottom of the mini-cards aligns with the Profit card */
+.sales-donut-card { 
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+.sales-content-body { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-top: auto; 
+  margin-bottom: auto;
+}
+
+.mini-cards-row { 
+  display: flex; 
+  gap: 24px; 
+}
+
+.mini-card { 
+  flex: 1; 
+  text-align: center; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+}
+
+/* --- RE-USABLE STYLES --- */
+.relative-header { position: relative; }
+.top-right-dots-sales, .top-right-dots { position: absolute; top: 0; right: 0; color: #a5a3ae; cursor: pointer; }
+.report-container { flex: 1; padding: 24px; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
+.total-val { font-size: 24px; color: #5d596c; margin: 0; font-weight: 600; }
+.sub-val { font-size: 13px; color: #a5a3ae; margin-top: 4px; }
+.stat-item { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.icon-box { width: 38px; height: 38px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+.green-tint { background: #e8fadf; color: #28c76f; }
+.purple-tint { background: #f2f0ff; color: #7367f0; }
+.grey-tint { background: #f5f5f5; color: #808390; }
+.report-btn { width: 100%; padding: 12px; background: #7367f0; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; margin-top: 10px;}
+.sales-amount { font-size: 22px; color: #5d596c; margin: 5px 0; }
+.trend-up { color: #28c76f; font-weight: 600; display: flex; align-items: center; font-size: 14px; }
+.donut-box { position: relative; width: 100px; height: 100px; }
+.donut-center-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+.donut-center-text strong { display: block; font-size: 16px; color: #5d596c; }
+.mini-val { font-size: 20px; color: #5d596c; margin: 0; }
+.mini-graph { width: 100%; height: 40px; margin: 5px 0; }
+.gauge-box { position: relative; width: 80px; margin-top: 5px; }
+.gauge-perc { position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); font-weight: 600; color: #5d596c; font-size: 14px; }

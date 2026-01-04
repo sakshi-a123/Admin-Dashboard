@@ -1,0 +1,23 @@
+.visitor-stack-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Creates the space that makes them look like 3 separate cards */
+  height: 100%;
+  
+  /* Make the container invisible */
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.kpi-top-row {
+  display: flex;
+  gap: 24px; /* Space between the Logistics and Reports cards */
+  width: 100%;
+}
+
+.visitor-bottom-row {
+  flex: 1; /* Ensures New Visitors card aligns with the height of side cards */
+  display: flex;
+}

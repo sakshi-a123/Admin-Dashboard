@@ -1,0 +1,83 @@
+/* Container for the top row - narrowed down to make boxes look smaller */
+.stat-card-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr; /* Ultra-wide rectangle ratio */
+  gap: 20px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 1200px; /* Limits the overall size */
+  align-items: flex-end; /* Keeps them on the same bottom level */
+}
+
+/* Base Card Styling - Reduced padding for smaller look */
+.card-base {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(76, 78, 100, 0.08);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 1. Rectangle: Wide and Short */
+.congrats-rectangle {
+  height: 140px; /* Reduced height */
+  background: #ffffff;
+}
+
+.congrats-rectangle h2 {
+  margin: 0;
+  font-size: 17px;
+  color: #5d596c;
+}
+
+.congrats-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #7367f0;
+  margin: 5px 0;
+  display: block;
+}
+
+/* 2. Squares: Smaller and Taller */
+.stat-square {
+  height: 180px; /* Reduced height to keep them compact */
+  min-width: 150px;
+}
+
+.icon-box {
+  width: 34px; /* Smaller icons */
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.bg-cyan { background-color: #e0f2fe; color: #00cfe8; }
+.bg-green { background-color: #e8fadf; color: #28c76f; }
+
+.main-val {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4b4b4b;
+}
+
+.trend-percent {
+  font-size: 11px;
+  font-weight: 600;
+  color: #28c76f;
+}
+
+.btn-purple {
+  background-color: #7367f0;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
